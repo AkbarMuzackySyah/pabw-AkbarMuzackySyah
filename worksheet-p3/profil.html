@@ -62,7 +62,25 @@
     </section>
     <section id="tambah-lagu">
       <h2>Tambah Lagu</h2>
-    </section>
+<form action="/simpan" method="post">
+        <p>
+          <label for="judul-lagu">Judul lagu: </label>
+          <input type="text" id="judul-lagu" name="judul-lagu" required>
+        </p>
+        <p>
+          <label for="penyanyi">Penyanyi: </label>
+          <input type="text" id="penyanyi" name="penyanyi" required>
+        </p>
+        <p>
+          <label for="pencipta">Pencipta: </label>
+          <input type="text" id="pencipta" name="pencipta" required>
+        </p>
+        <p>
+          <label for="durasi">Durasi (menit:detik): </label>
+          <input type="text" id="durasi" name="durasi" required>
+        </p>
+        <button type="submit">Tambah Lagu</button>
+      </form>
 </main>
 
 <footer>
