@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlist Musik Favorit Saya</title>
+
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+
+</head>
+
+<body>
+    <header>
+    <h1>Playlist Musik Favorit Saya</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#daftar-lagu">Daftar Lagu</a></li>
+        <li><a href="#tambah-lagu">Tambah Lagu</a></li>
+        <li><a href="#tentang-saya">Tentang Saya</a></li>
+      </ul>
+    </nav>
+    </header>
+
+<main>
+    <section id="daftar-lagu">
+      <h2>Daftar Lagu</h2>
+      <figure>
+        <img src="playlist-favorit.webp"
+             alt="Tampilan antarmuka playlist lagu musik favorit"
+             width="100" height="100" loading="lazy">
+        <figcaption>Koleksi playlist lagu favorit yang sering didengarkan sehari-hari.</figcaption>
+      </figure>
+      <table>
+        <caption>Daftar Lagu Favorit Saya</caption>
+        <thead>
+          <tr>
+            <th scope="col">Judul lagu</th>
+            <th scope="col">Penyanyi</th>
+            <th scope="col">Pencipta</th>
+            <th scope="col">Durasi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Kalah</th>
+            <td> Aftershine berkolaborasi dengan Restianade </td>
+            <td> Andika Permana Putra </td>
+            <td>1:06</td>
+          </tr>
+          <tr>
+            <th scope="row">Los Dol</th>
+            <td>Denny Caknan</td>
+            <td>Denny Caknan & Lek Dahlan</td>
+            <td>4:48</td>
+          </tr>
+          <tr>
+            <th scope="row">Nemen</th>
+            <td> NDX AKA</td>
+            <td>Gilga Sahid (GildCoustic)</td>
+            <td>4:48</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="tambah-lagu">
+      <h2>Tambah Lagu</h2>
+<form action="/simpan" method="post">
+        <p>
+          <label for="judul-lagu">Judul lagu: </label>
+          <input type="text" id="judul-lagu" name="judul-lagu" required>
+        </p>
+        <p>
+          <label for="penyanyi">Penyanyi: </label>
+          <input type="text" id="penyanyi" name="penyanyi" required>
+        </p>
+        <p>
+          <label for="pencipta">Pencipta: </label>
+          <input type="text" id="pencipta" name="pencipta" required>
+        </p>
+        <p>
+          <label for="durasi">Durasi (menit:detik): </label>
+          <input type="text" id="durasi" name="durasi" required>
+        </p>
+        <button type="submit">Tambah Lagu</button>
+      </form>
+      </section>
+    <section id="tentang-saya">
+      <h2>Tentang Saya</h2>
+      <p>Saya adalah seorang pecinta musik yang suka mendengarkan berbagai genre lagu. Saya memiliki playlist musik favorit yang terus diperbarui setiap hari.</p>
+    </section>
+</main>
+<footer>
+    <p>Akbar Muzacky Syah · 25523218 · 2026</p>
+</footer>
+</body>
+</html>

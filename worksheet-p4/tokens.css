@@ -1,0 +1,54 @@
+/* LAPIS 1 — primitif: nilai mentah (Palet Warna Lengkap) */
+:root {
+  /* Palet Gelap (Midnight) */
+  --black-100: #121212;
+  --black-200: #181818;
+  --black-300: #282828;
+  
+  /* Palet Terang (Light) */
+  --white: #ffffff;
+  --gray-100: #f4f4f5;
+  --gray-200: #e4e4e7;
+  --gray-500: #71717a;
+  --gray-900: #09090b;
+
+  /* Palet Hijau (Neon/Emerald) */
+  --green-400: #22c55e; /* Hijau Terang Focus */
+  --green-500: #1ed760; /* Hijau Khas Spotify */
+  --green-700: #16a34a; /* Hijau Tua untuk Tema Terang */
+
+  /* Skala Jarak */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-6: 2.5rem;
+  --section-gap: 3rem;
+
+  /* Tipografi */
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-xl: 1.5rem;
+  --text-3xl: 2.25rem;
+
+  /* Lengkungan & Bayangan */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-1: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 15px rgba(30, 215, 96, 0.3);
+}
+
+/* LAPIS 2 — semantik: peran (Mengambil dari Lapis 1) */
+:root {
+  /* Tema Terang (Default) */
+  --color-bg:       var(--gray-100);
+  --color-surface:  var(--white);
+  --color-fg:       var(--gray-900);
+  --color-fg-muted: var(--gray-500);
+  --color-border:   var(--gray-200);
+  
+  /* Peran Warna Utama */
+  --color-primary:  var(--green-700);
+  --color-focus:    var(--green-400);
+}
