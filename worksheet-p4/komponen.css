@@ -39,12 +39,12 @@ input.user-invalid {
   border-width: 2px;
 }
 
-.pesan-error {
+.pesan-galat {
   display: none;
   color: var(--color-danger);
   font-size: var(--text-sm);
 }
 
-.form-kolom input.user-invalid + .pesan-error {
+.form-kolom input.user-invalid + .pesan-galat {
   display: block;
 }
