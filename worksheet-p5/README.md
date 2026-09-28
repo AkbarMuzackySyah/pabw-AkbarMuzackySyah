@@ -1,8 +1,8 @@
-## Pertemuan 4 — Design Token Halaman Profil (Playlist Lagu)
+# Pertemuan 4 — Design Token Halaman Profil
 * Berkas gaya yang akan dibuat: `tokens.css`, `base.css`, `layout.css`, `komponen.css`, `tema.css`.
-* Tema: Hijau Spotify / Playlist Lagu.
+* Tema: Hijau Spotify.
 * Warna utama: `#16a34a` (`--green-700`), dipilih karena memberikan nuansa segar, modern, dan identik dengan pemutar musik digital.
-### Token yang saya tetapkan
+## Token yang saya tetapkan
 | Token | Nilai | Untuk apa |
 |---|---|---|
 | `--color-primary` | `#16a34a` | Tombol play, tautan, dan penanda utama |
@@ -16,3 +16,5 @@
 | `--space-4` | `1.5rem` | Jarak standar antar elemen |
 
 Kriteria selesai saya: mengubah `--color-primary` di satu baris harus mengubah warna tombol, tautan, judul, dan garis fokus.
+### Catatan penggunaan AI
+-untuk membatu saya memahami kode lebih dalam terutama pada fungsi dari setip elemen itu sendiri
