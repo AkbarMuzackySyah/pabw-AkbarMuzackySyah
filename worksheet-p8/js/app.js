@@ -22,3 +22,31 @@ const formatGenre = (daftar) => daftar.join(" • ");
 
 console.log(buatPerkenalan(profil));
 console.log("Genre Musik:", formatGenre(profil.genreFavorit));
+
+const daftarLagu = [
+  { id: 1, judul: "Kalah", penyanyi: "Aftershine ft. Restianade", pencipta: "Andika Permana Putra", durasi: "1:06", dikategorikan: true },
+  { id: 2, judul: "Los Dol", penyanyi: "Denny Caknan", pencipta: "Denny Caknan & Lek Dahlan", durasi: "4:48", dikategorikan: true },
+  { id: 3, judul: "Nemen", penyanyi: "NDX AKA", pencipta: "Gilga Sahid", durasi: "4:48", dikategorikan: false }
+];
+
+console.log("--- Seluruh Daftar Lagu ---");
+console.table(daftarLagu);
+
+const laguTerkategori = daftarLagu.filter((lagu) => lagu.dikategorikan);
+console.log("--- Hasil Filter (Lagu Terkategori) ---");
+console.table(laguTerkategori);
+
+const cariLagu = daftarLagu.find((lagu) => lagu.judul === "Nemen");
+console.log("--- Hasil Find ('Nemen') ---");
+console.log(cariLagu);
+
+const daftarRingkas = daftarLagu.map((lagu) => ({
+  judul: lagu.judul,
+  penyanyi: lagu.penyanyi
+}));
+console.log("--- Hasil Map (Ringkasan) ---");
+console.table(daftarRingkas);
+
+const daftarUrutJudul = [...daftarLagu].sort((a, b) => a.judul.localeCompare(b.judul));
+console.log("--- Hasil Sort (Salinan Terurut) ---");
+console.table(daftarUrutJudul)
