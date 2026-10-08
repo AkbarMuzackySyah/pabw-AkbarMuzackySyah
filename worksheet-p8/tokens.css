@@ -1,0 +1,48 @@
+:root {
+
+  --black-100: #121212;
+  --black-200: #181818;
+  --black-300: #282828;
+  
+  --white: #ffffff;
+  --gray-100: #f4f4f5;
+  --gray-200: #e4e4e7;
+  --gray-500: #71717a;
+  --gray-900: #09090b;
+
+  --green-400: #22c55e; 
+  --green-500: #1ed760; 
+  --green-700: #16a34a;
+  --red-500: #ef4444; 
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-6: 2.5rem;
+  --section-gap: 3rem;
+
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-xl: 1.5rem;
+  --text-3xl: 2.25rem;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-1: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 15px rgba(30, 215, 96, 0.3);
+}
+
+:root {
+
+  --color-bg:       var(--gray-100);
+  --color-surface:  var(--white);
+  --color-fg:       var(--gray-900);
+  --color-fg-muted: var(--gray-500);
+  --color-border:   var(--gray-200);
+  
+  --color-primary:  var(--green-700);
+  --color-focus:    var(--green-400);
+  --color-danger:   var(--red-500)
+}
