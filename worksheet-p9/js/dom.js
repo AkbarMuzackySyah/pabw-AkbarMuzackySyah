@@ -33,6 +33,7 @@ barisFilter.id = "filter";
 barisFilter.className = "filter-container";
 barisFilter.style.marginBottom = "1rem";
 barisFilter.innerHTML = `
+    <button type="button" class="tombol-filter" data-kategori="semua">Semua</button>
     <button type="button" class="tombol-filter" data-kategori="Pop Jawa">Pop Jawa</button>
     <button type="button" class="tombol-filter" data-kategori="Dangdut Koplo">Dangdut Koplo</button>
     <button type="button" class="tombol-filter" data-kategori="Hip-Hop Jawa">Hip-Hop Jawa</button>
@@ -51,4 +52,62 @@ barisFilter.addEventListener("click", (event) => {
 
     const hasilFilter = daftarLagu.filter((lagu) => kategori === "semua" || lagu.kategori === kategori);
     render(hasilFilter);
+});
+
+function render(data) {
+    wadah.textContent = "";
+    if (data.length === 0) {
+        pesanKosong.hidden = false;
+        return;
+    }
+    pesanKosong.hidden = true;
+    
+    const dataTerurut = [...data].sort((a, b) => a.judul.localeCompare(b.judul));
+    dataTerurut.forEach((lagu) => {
+        wadah.append(buatBarisLagu(lagu));
+    });
+}
+
+render(daftarLagu);
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const judul = inputJudul.value.trim();
+    const penyanyi = inputPenyanyi.value.trim();
+    const pencipta = inputPencipta.value.trim();
+    const durasi = inputDurasi.value.trim();
+
+    let isValid = true;
+
+    [inputJudul, inputPenyanyi, inputPencipta, inputDurasi].forEach((input) => {
+        if (input.value.trim() === "") {
+        input.classList.add("user-invalid");
+        input.setAttribute("aria-invalid", "true");
+        isValid = false;
+        } else {
+        input.classList.remove("user-invalid");
+        input.removeAttribute("aria-invalid");
+    }
+});
+
+if (!isValid ) return;
+
+const laguBaru = {
+    id: daftarLagu.length + 1,
+    judul,
+    penyanyi,
+    pencipta,
+    durasi,
+    kategori: "Pop Jawa",
+};
+
+daftarLagu.push(laguBaru);
+render(daftarLagu);
+
+form.reset();
+[inputJudul, inputPenyanyi, inputPencipta, inputDurasi].forEach((input) => {
+    input.classList.remove("user-invalid");
+    input.removeAttribute("aria-invalid");
+    });
 });
