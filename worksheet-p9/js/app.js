@@ -24,9 +24,9 @@ console.log(buatPerkenalan(profil));
 console.log("Genre Musik:", formatGenre(profil.genreFavorit));
 
 export const daftarLagu = [
-  { id: 1, judul: "Kalah", penyanyi: "Aftershine ft. Restianade", pencipta: "Andika Permana Putra", durasi: "1:06", dikategorikan: true },
-  { id: 2, judul: "Los Dol", penyanyi: "Denny Caknan", pencipta: "Denny Caknan & Lek Dahlan", durasi: "4:48", dikategorikan: true },
-  { id: 3, judul: "Nemen", penyanyi: "NDX AKA", pencipta: "Gilga Sahid", durasi: "4:48", dikategorikan: false }
+  { id: 1, judul: "Kalah", penyanyi: "Aftershine ft. Restianade", pencipta: "Andika Permana Putra", durasi: "1:06", kategori: "Pop Jawa", dikategorikan: true },
+  { id: 2, judul: "Los Dol", penyanyi: "Denny Caknan", pencipta: "Denny Caknan & Lek Dahlan", durasi: "4:48", kategori: "Dangdut Koplo", dikategorikan: true },
+  { id: 3, judul: "Nemen", penyanyi: "NDX AKA", pencipta: "Gilga Sahid", durasi: "4:48", kategori: "Pop Jawa", dikategorikan: true }
 ];
 
 console.log("--- Seluruh Daftar Lagu ---");

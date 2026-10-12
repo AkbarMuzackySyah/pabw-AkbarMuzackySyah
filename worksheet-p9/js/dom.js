@@ -7,6 +7,15 @@ const inputPenyanyi = document.querySelector("#penyanyi");
 const inputPencipta = document.querySelector("#pencipta");
 const inputDurasi = document.querySelector("#durasi");
 
+let pesanKosong = document.querySelector("#pesan-kosong");
+if (!pesanKosong) {
+    pesanKosong = document.createElement("p");
+    pesanKosong.id = "pesan-kosong";
+    pesanKosong.textContent = "Tidak ada lagu yang tersedia.";
+    pesanKosong.hidden = true;
+    wadah.parentElement.after(pesanKosong);
+}
+
 function buatBarisLagu(lagu) {
     const tr = document.createElement("tr");
 
@@ -111,3 +120,4 @@ form.reset();
     input.removeAttribute("aria-invalid");
     });
 });
+
