@@ -31,16 +31,15 @@ export let daftarLagu = [];
 async function muatData() {
   tampilkanPesanMuat("Memuat data...");
   try {
-    const data = await ambilProyek(); // Memanggil api.js tanpa fetch di app.js
+    const data = await ambilProyek(); 
     daftarLagu = data;
-    render(daftarLagu); // Menggambar data ke halaman melalui dom.js
+    render(daftarLagu); 
     console.log("--- Berhasil Memuat Daftar Lagu dari Jaringan/API ---");
     console.table(daftarLagu);
   } catch (galat) {
     tampilkanGalatHalaman("Data gagal dimuat. Periksa koneksi internet Anda, lalu muat ulang halaman.");
     console.error("Galat saat memuat data:", galat.message);
   } finally {
-    // Sembunyikan elemen pesan memuat setelah proses selesai
     const pesanMuat = document.querySelector("#muat");
     if (pesanMuat) pesanMuat.hidden = true;
   }

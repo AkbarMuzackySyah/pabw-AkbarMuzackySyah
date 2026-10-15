@@ -79,9 +79,9 @@ barisFilter.addEventListener("click", (event) => {
     render(hasilFilter);
 });
 
-function render(data) {
+export function render(data) {
     wadah.textContent = "";
-    if (data.length === 0) {
+    if (!data || data.length === 0) {
         pesanKosong.hidden = false;
         return;
     }
@@ -92,8 +92,6 @@ function render(data) {
         wadah.append(buatBarisLagu(lagu));
     });
 }
-
-render(daftarLagu);
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
