@@ -21,7 +21,9 @@ function buatPerkenalan({ nama, peran }) {
   return `Pengguna: ${nama} | Peran: ${peran}`;
 }
 
-const formatGenre = (daftar) => daftar.join(" • ");
+function formatGenre(daftar) {
+  return daftar.join(" • ");
+}
 
 console.log(buatPerkenalan(profil));
 console.log("Genre Musik:", formatGenre(profil.genreFavorit));

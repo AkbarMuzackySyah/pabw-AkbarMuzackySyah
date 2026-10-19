@@ -5,10 +5,13 @@ export const profil = {
         genreFavorit: ["Pop Jawa", "Dangdut Koplo", "Hip-Hop Jawa"],
         jumlahLagu: 3
 };
-
-
-export function buatPerkenalan({ nama, peran }) {
-    return `Pengguna: ${nama} | Peran: ${peran}`;
+export function kalimatPerkenalan() {
+  return `Pengguna: ${profil.nama} | Peran: ${profil.peran}`;
 }
 
 export const formatGenre = (daftar) => daftar.join(" • ");
+
+export function saring(daftar, kategori) {
+  if (!daftar) return [];
+  return daftar.filter((lagu) => kategori === "semua" || lagu.kategori === kategori);
+}

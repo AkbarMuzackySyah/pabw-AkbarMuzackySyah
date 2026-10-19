@@ -40,6 +40,25 @@ export function pulihkan(isi) {
     state.favorit = isi.favorit ?? [];
 }
 
+export function aturUlang() {
+    localStorage.removeItem(KUNCi);
+    state.kategoriAktif = "semua";
+    state.favorit = [];
+    render(state);
+}
+
+export function pilihKategori(kategori) {
+    state.kategoriAktif = kategori;
+    simpan(state);
+    render(state);
+}
+
+export function isiProyek(daftar) {
+    state.daftarProyek = daftar;
+    simpan(state);
+    render(state);
+}
+
 export function tambahFavorit(id) {
     if (state.favorit.includes(id)) {
         state.favorit = state.favorit.filter((favId) => favId !== id);
