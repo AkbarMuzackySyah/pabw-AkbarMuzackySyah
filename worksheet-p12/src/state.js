@@ -1,13 +1,15 @@
-import {render} from "./dom.js";
+import { reactive } from 'vue';
 
-const KUNCi = "pabw-p11"
+const KUNCi = "pabw-p11";
 const VERSI = 2;
 
-export const state = {
+export const state = reactive({
     kategoriAktif: "semua",
     favorit: [],
     daftarProyek: [],
-};
+    memuat: true,
+    galat: "",
+});
 
 export function simpan(stateObj) {
     const isi = {
@@ -21,17 +23,17 @@ export function simpan(stateObj) {
 export function muat() {
     try {
         const dataMentah = localStorage.getItem(KUNCi);
-        if (!dataMentah) return;
+        if (!dataMentah) return null;
         const isi = JSON.parse(dataMentah);
         if (isi?.versi !== VERSI) {
             localStorage.removeItem(KUNCi);
             return null;
         }
         return isi;
-        } catch {
-            localStorage.removeItem(KUNCi);
-            return null;
-        }
+    } catch {
+        localStorage.removeItem(KUNCi);
+        return null;
+    }
 }
 
 export function pulihkan(isi) {
@@ -44,19 +46,16 @@ export function aturUlang() {
     localStorage.removeItem(KUNCi);
     state.kategoriAktif = "semua";
     state.favorit = [];
-    render(state);
 }
 
 export function pilihKategori(kategori) {
     state.kategoriAktif = kategori;
     simpan(state);
-    render(state);
 }
 
 export function isiProyek(daftar) {
     state.daftarProyek = daftar;
     simpan(state);
-    render(state);
 }
 
 export function tambahFavorit(id) {
@@ -66,11 +65,9 @@ export function tambahFavorit(id) {
         state.favorit = [...state.favorit, id];
     }
     simpan(state);
-    render(state);
 }
 
 export function tambahLaguState(laguBaru) {
     state.daftarProyek = [...state.daftarProyek, laguBaru];
     simpan(state);
-    render(state);
 }

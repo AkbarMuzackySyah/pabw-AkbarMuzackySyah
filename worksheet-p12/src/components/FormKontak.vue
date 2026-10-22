@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { state } from '../state.js'
+import { tambahLaguState } from '../state.js'
 
 const judul = ref('')
 const penyanyi = ref('')
@@ -8,15 +8,20 @@ const pencipta = ref('')
 const durasi = ref('')
 
 function tambahLaguBaru() {
-  if (!judul.value || !penyanyi.value) return
-  state.daftarProyek.push({
+  if (!judul.value.trim() || !penyanyi.value.trim()) return
+
+  const laguBaru = {
     id: Date.now(),
-    judul: judul.value,
-    penyanyi: penyanyi.value,
-    pencipta: pencipta.value,
-    durasi: durasi.value,
-    kategori: 'pop'
-  })
+    judul: judul.value.trim(),
+    penyanyi: penyanyi.value.trim(),
+    pencipta: pencipta.value.trim(),
+    durasi: durasi.value.trim(),
+    kategori: 'Pop Jawa',
+    dikategorikan: true
+  }
+
+  tambahLaguState(laguBaru)
+
   judul.value = ''
   penyanyi.value = ''
   pencipta.value = ''
