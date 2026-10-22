@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "judul": "kalah",
+        "penyanyi": "Aftershine ft. Restianade",
+        "pencipta": "Andika Permana Putra",
+        "durasi": "1:06",
+        "kategori": "Pop Jawa",
+        "dikategorikan": true
+    },
+    {
+        "id": 2,
+        "judul": "Los Dol",
+        "penyanyi": "Denny Caknan",
+        "pencipta": "Denny Caknan & Lek Dahlan",
+        "durasi": "4:48",
+        "kategori": "Dangdut Koplo",
+        "dikategorikan": true
+    },
+    {
+        "id": 3,
+        "judul": "Nemen",
+        "penyanyi": "NDX AKA",
+        "pencipta": "Gilga Sahid",
+        "durasi": "4:48",
+        "kategori": "Pop Jawa",
+        "dikategorikan": true
+    }
+]
